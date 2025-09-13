@@ -21,11 +21,11 @@ def driver(request):
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--disable-gpu")  # Отключаем GPU
-        options.add_argument("--disable-extensions")  # Отключаем расширения
-        options.add_argument("--disable-infobars")  # Отключаем информационные панели
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])  # Отключаем автоматизацию
-        options.add_experimental_option('useAutomationExtension', False)  # Отключаем автоматизацию
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-extensions")
+        options.add_argument("--disable-infobars")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
         driver = webdriver.Chrome(options=options)
     elif browser_name == "firefox":
         options = FirefoxOptions()
